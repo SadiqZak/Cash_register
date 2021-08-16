@@ -16,6 +16,7 @@ check.addEventListener("click",function (){
             calculateChange(amountToBeReturned)
         }else{
             showMessage("The amount should be atleast equal to the bill amount")
+            console.log("click")
         }
     }else{
         showMessage("Invalid input")
@@ -29,8 +30,8 @@ function showMessage(message){
 }
 
 function hiddenMessage(){
-     errorMessage.style.display = "none";
- }
+      errorMessage.style.display = "none";
+}
 
 function calculateChange(amountToBeReturned ){
     for(let i=0; i< amountAvailable.length;i++){
