@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cash Register Manager</h1>
+        <p>An application which offers a survey and helps accounting</p>
+        <label for="billAmount">Bill Amount</label>
+        <input id="billAmount" type="text">
+        <label for="cashGiven">Cash Given</label>
+        <input id="cashGiven" type="text">
+        
+        <div>
+            <button id="check">Check</button>
+        </div>
+
+        <p id="errorMessage"></p>
+    
+        <table>
+            <caption></caption>
+            <tr>
+                <th>No. Of notes</th>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+                <td class="notes"></td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>200</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>
