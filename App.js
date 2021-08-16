@@ -9,6 +9,7 @@ const amountAvailable =[2000,500,100,20,10,5,1];
 
 check.addEventListener("click",function (){
     hiddenMessage();
+    
     if(billAmount.value > 0){
         if (cashGiven.value >= billAmount.value){
             const amountToBeReturned = (cashGiven.value - billAmount.value)
