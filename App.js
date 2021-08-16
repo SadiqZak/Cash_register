@@ -7,24 +7,24 @@ const noOfNote = document.querySelectorAll(".notes");
 const amountAvailable =[2000,500,100,20,10,5,1];
 
 
-check.addEventListener("click",function (){
+check.addEventListener("click",function validateBillAmount(){
     hiddenMessage();
     
     if(billAmount.value > 0){
         if (cashGiven.value >= billAmount.value){
-            const amountToBeReturned = (cashGiven.value - billAmount.value)
-            calculateChange(amountToBeReturned)
+            const amountToBeReturned = cashGiven.value - billAmount.value;
+            calculateChange(amountToBeReturned);
         }else{
-            showMessage("The amount should be atleast equal to the bill amount")
-            console.log("click")
+            showMessage("The amount should be atleast equal to the bill amount");
+            
         }
     }else{
-        showMessage("Invalid input")
+        showMessage("Invalid input");
     }
 })
 
 function showMessage(message){
-    console.log("here")
+    
     errorMessage.style.display = "block";
     errorMessage.innerText = message;
 }
