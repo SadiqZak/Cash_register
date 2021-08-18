@@ -9,18 +9,28 @@ const amountAvailable =[2000,500,100,20,10,5,1];
 
 check.addEventListener("click",function validateBillAmount(){
     hiddenMessage();
+    if (cashGiven.value.length === billAmount.value.length){
+        cashGiven.value = cashGiven.value;
+        billAmount.value= billAmount.value;
+    }else{
+        if(cashGiven.value.length < billAmount.value.length){
+            cashGiven.value = "0"+cashGiven.value;   
+        }else{
+            billAmount.value = "0"+billAmount.value;
+        }
+    }
+    
     
     if(billAmount.value > 0){
         if (cashGiven.value >= billAmount.value){
-            const amountToBeReturned = cashGiven.value - billAmount.value;
-            calculateChange(amountToBeReturned);
+             const amountToBeReturned = cashGiven.value - billAmount.value;
+             calculateChange(amountToBeReturned);
         }else{
-            showMessage("The amount should be atleast equal to the bill amount");
-            
-        }
-    }else{
-        showMessage("Invalid input");
-    }
+             showMessage("The amount should be atleast equal to the bill amount");   
+         }
+     }else{
+         showMessage("Invalid input");
+     }
 })
 
 function showMessage(message){
