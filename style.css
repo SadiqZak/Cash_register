@@ -52,6 +52,7 @@ button:hover{
 }
 
 table{
+    padding: 5px;
     margin: auto;
     padding-bottom: 30px;
     max-width: 600px;
