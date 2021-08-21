@@ -51,18 +51,32 @@ button:hover{
     background-color: #fff;
 }
 
-table{
-    padding: 5px;
-    padding-left: 0;
-    margin: auto;
-    margin-left: 0;
-    padding-bottom: 30px;
-    max-width: 300px;
-    width:50%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+@media (min-width:400px){
+    table{
+        padding: 5px;
+        margin: auto;
+        max-width: 300px;
+        width:50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
+
+@media (max-width:400px) {
+    table{
+        padding: 5px;
+        padding-left: 0;
+        margin: auto;
+        margin-left: 0;
+        max-width: 300px;
+        width:50%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 
 th,td{
     
