@@ -53,9 +53,12 @@ button:hover{
 
 table{
     padding-bottom: 30px;
+    max-width: 600px;
+    width:80%;
 }
 
 th,td{
+    
     font-weight: bold;
     border: 1px solid var(--primary-color);
     padding: 10px 4px;
