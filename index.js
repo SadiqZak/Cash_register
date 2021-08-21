@@ -4,25 +4,25 @@ const errorMessage= document.querySelector("#errorMessage");
 const check = document.querySelector("#check");
 const noOfNote = document.querySelectorAll(".notes");
 
-const amountAvailable =[2000,500,100,20,10,5,1];
+const amountAvailable =[2000,500,200,100,20,10,5,1];
 
 
 check.addEventListener("click",function validateBillAmount(){
     hiddenMessage();
-    if (cashGiven.value.length === billAmount.value.length){
-        cashGiven.value = cashGiven.value;
-        billAmount.value= billAmount.value;
-    }else{
-        if(cashGiven.value.length < billAmount.value.length){
-            cashGiven.value = "0"+cashGiven.value;   
-        }else{
-            billAmount.value = "0"+billAmount.value;
-        }
-    }
+    // if (cashGiven.value.length === billAmount.value.length){
+    //     cashGiven.value = cashGiven.value;
+    //     billAmount.value= billAmount.value;
+    // }else{
+    //     if(cashGiven.value.length < billAmount.value.length){
+    //         cashGiven.value = "0"+cashGiven.value;   
+    //     }else{
+    //         billAmount.value = "0"+billAmount.value;
+    //     }
+    // }
     
     
-    if(billAmount.value > 0){
-        if (cashGiven.value >= billAmount.value){
+    if(Number(billAmount.value) > 0){
+        if (Number(cashGiven.value) >= Number(billAmount.value)){
              const amountToBeReturned = cashGiven.value - billAmount.value;
              calculateChange(amountToBeReturned);
         }else{
